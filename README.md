@@ -66,7 +66,48 @@ Return an integer array consisting of all the outputs of queries of type **3**.
 1
 ```
 
-# Explanation O
+# Explanation 0
 For the first query of type **3**, there is no integer whose frequency is **2(array=[5,6])**. So answer is **0**.
 For the second query of type **3**, there are two integers in **array = [6, 10, 10, 6]** 
 whose frequency is **2(integers = 6 and 10 )**. So, the answer is **1**.
+
+# Sample Input 1
+```
+4
+3 4
+2 1003
+1 16
+3 1
+```
+# Sample Output 1
+```
+0
+1
+```
+# Explanation 1
+For the first query of type **3**, there is no integer of frequency **4**. The answer is **0**.
+For the second query of type **3**, there is one integer, **16** of frequency **1** so the answer is **1**.
+
+# Sample Input 2
+```
+10
+1 3
+2 3
+3 2
+1 4
+1 5
+1 5
+1 4
+3 2
+2 4
+3 2
+```
+# Sample Output 2
+```
+0
+1
+1
+```
+# Explanation 2
+When the first output query is run, the array is empty. We insert two **4**'s and two **5**'s before the second output query,
+**arr = [4, 5, 5, 4]** so there are two instances of elements occurring twice. We delete a **4** and run the same query. Now only the instances of **5** satisfy the query.
